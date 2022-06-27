@@ -22,3 +22,7 @@
 21-reverse script reverses its input
 22-users_and_homes displays all users and thier home directory
 100-empty_casks script lists all empty files and directories
+100-empty_casks  script finds all empty files and directories
+101-gifs script list all files with .gif
+102-acrostic script decodes acrostics
+103-the_biggest_fan script parses webserver logs in TSV format
