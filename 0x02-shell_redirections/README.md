@@ -17,3 +17,4 @@
 16-whatsnext displays 3 line after pattern match
 17-hidethisword script diplays lines that do not contain the pattern bin
 18-letteronly script displays files that start with letters only
+19-AZ script replaces specific characters
