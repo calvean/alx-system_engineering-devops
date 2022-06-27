@@ -1,2 +1,2 @@
 #!/bin/bashi
-find . -type d -not -name "." | wc -l
+find . -type d -not -name '.' | wc -l
