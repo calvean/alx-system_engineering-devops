@@ -15,3 +15,4 @@
 14-findthatword script finds root in /etc/passwd
 15-countthatword script count number of lines that contains the word bin
 16-whatsnext displays 3 line after pattern match
+17-hidethisword script diplays lines that do not contain the pattern bin
