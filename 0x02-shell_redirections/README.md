@@ -20,3 +20,4 @@
 19-AZ script replaces specific characters
 20-hiago script removes letter c
 21-reverse script reverses its input
+22-users_and_homes displays all users and thier home directory
