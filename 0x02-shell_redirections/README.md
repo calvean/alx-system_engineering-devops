@@ -19,3 +19,4 @@
 18-letteronly script displays files that start with letters only
 19-AZ script replaces specific characters
 20-hiago script removes letter c
+21-reverse script reverses its input
