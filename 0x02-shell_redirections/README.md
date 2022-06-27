@@ -10,3 +10,4 @@
 9-duplicate_last_line script duplicates last line of a file
 10-no_more_js script delets all .js files in current directory and subdirectories
 11-directory script counts directories
+12-newest_files script displays 10 newest file in the working directory
