@@ -4,3 +4,4 @@ This project is for shell variables and expansions
 2-path script adds directory to PATH
 3-paths script lists nuber of directries in PATH
 4-global_variables script prints environment variables
+5-local_variables script displays local variables
