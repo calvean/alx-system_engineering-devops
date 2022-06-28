@@ -8,3 +8,4 @@ This project is for shell variables and expansions
 6-create_local_variable script creates a local variable
 7-global_variable script creates global variable
 8-true_knowledge script add 128 and value in a variable
+9-divide_and_rule script performs division of variable
