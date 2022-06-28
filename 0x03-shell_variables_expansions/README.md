@@ -11,3 +11,4 @@ This project is for shell variables and expansions
 9-divide_and_rule script performs division of variable
 10-love_exponent_breath script displays exponents
 11-binary_to_decimal script conerts bnary to decimal
+12-combinations script creates combinations
