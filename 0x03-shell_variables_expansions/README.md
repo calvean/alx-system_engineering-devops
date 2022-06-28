@@ -6,3 +6,4 @@ This project is for shell variables and expansions
 4-global_variables script prints environment variables
 5-local_variables script displays local variables
 6-create_local_variable script creates a local variable
+7-global_variable script creates global variable
