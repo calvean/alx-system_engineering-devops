@@ -9,3 +9,4 @@ This project is for shell variables and expansions
 7-global_variable script creates global variable
 8-true_knowledge script add 128 and value in a variable
 9-divide_and_rule script performs division of variable
+10-love_exponent_breath script displays exponents
