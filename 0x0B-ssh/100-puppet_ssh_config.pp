@@ -1,4 +1,4 @@
- Create ssh config in ~/.ssh/config on client
+#Create ssh config in ~/.ssh/config on client
 file_line { 'Private key file':
   ensure => 'present',
   path   => '/etc/ssh/ssh_config',
