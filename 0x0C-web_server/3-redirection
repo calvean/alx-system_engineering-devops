@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# Serve a web page using nginx
+apt update -y
+apt install -y nginx
+
+echo "Hello World!" > /var/www/html/some_page.html
+
+LINE="\\\trewrite ^/redirect_me https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;"
+sed -i "24i $LINE" /etc/nginx/sites-available/default
+
+service nginx restart
