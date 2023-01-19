@@ -4,5 +4,4 @@ apt -y update
 apt install -y nginx
 ufw allow 'Nginx HTTP'
 echo "Hello World!" > /var/www/html/some_page.html
-sed -i 's/80/80/g' /etc/nginx/sites-enabled/default
 service nginx restart
