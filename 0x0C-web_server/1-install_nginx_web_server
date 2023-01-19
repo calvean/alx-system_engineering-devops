@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Serve a web page using nginx
+apt -y update
+apt install -y nginx
+ufw allow 'Nginx HTTP'
+echo "Hello World!" > /var/www/html/some_page.html
+service nginx restart
