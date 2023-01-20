@@ -3,7 +3,15 @@
 apt update -y
 apt install -y nginx
 echo "Hello World!" > /var/www/html/index.html
-LINE="\\\trewrite ^/redirect_me https://github.com/calvean/alx-system_engineering-devops/tree/master/0x0C-web_server permanent;"
-sed -i "24i $LINE" /etc/nginx/sites-available/default
+
+printf %s "server {
+    listen 80;
+    listen [::]:80 default_server;
+    root   /etc/nginx/html;
+    index  index.html index.htm;
+    location /redirect_me {
+        return 301 http://codeslap.tech/;
+    }
+}" > /etc/nginx/sites-available/default
 
 service nginx restart
