@@ -2,16 +2,10 @@
 # Serve a web page using nginx
 apt update -y
 apt install -y nginx
+
 echo "Hello World!" > /var/www/html/index.html
 
-printf %s "server {
-    listen 80;
-    listen [::]:80 default_server;
-    root   /etc/nginx/html;
-    index  index.html index.htm;
-    location /redirect_me {
-        return 301 http://codeslap.tech/;
-    }
-}" > /etc/nginx/sites-available/default
+REDIRECT="\\\trewrite ^/redirect_me https://github.com/calvean permanent;"
+sed -i "24i $REDIRECT" /etc/nginx/sites-available/default
 
 service nginx restart
