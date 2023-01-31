@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# forwards a port
+sed -i 's/\*nat\n:PREROUTING ACCEPT [0:0]\n-A PREROUTING -p tcp --dport 80 -j REDIRECT --to-port 8080\nCOMMIT' ./test.txt
+
