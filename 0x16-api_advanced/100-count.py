@@ -9,22 +9,27 @@ def count_words(subreddit, word_list, instances={}, after="", count=0):
      of all hot articles, and prints a sorted count of given keywords
       (case-insensitive, delimited by spaces
     """
-    url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
-    headers = {'User-Agent': 'API Project by Calvean'}
-    s = {"limit": 100, "after": after, "count": count}
-    res = requests.get(url, params=s, headers=headers, allow_redirects=False)
-    list_a = res.json().get('data', {}).get('children', None)
-    page = res.json().get('data', {}).get('after', None)
-
+    url = "https://www.reddit.com/r/{}/hot/.json".format(subreddit)
+    headers = {
+        "User-Agent": "linux:0x16.api.advanced:v1.0.0 (by /u/bdov_)"
+    }
+    params = {
+        "after": after,
+        "count": count,
+        "limit": 100
+    }
+    response = requests.get(url, headers=headers, params=params,
+                            allow_redirects=False)
     try:
-        results = res.json()
-        if res.status_code == 404:
+        results = response.json()
+        if response.status_code == 404:
             raise Exception
     except Exception:
         print("")
         return
 
-    results, after = results.get("data"), results.get("after")
+    results = results.get("data")
+    after = results.get("after")
     count += results.get("dist")
     for c in results.get("children"):
         title = c.get("data").get("title").lower().split()
