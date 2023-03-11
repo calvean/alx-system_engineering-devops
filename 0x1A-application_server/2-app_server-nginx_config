@@ -2,9 +2,12 @@ server {
     listen      80 default_server;
     listen      [::]:80 default_server ipv6only=on;
     server_name 54.237.46.86;
+    root   /var/www/html;
+    index  index.html index.htm;
     add_header  X-Served-By 67841-web-01;
 
-    location / {
+    location /airbnb-onepage {
+        include proxy_params;
         proxy_pass http://unix:/home/flask/flask.sock;
     }
 
