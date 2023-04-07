@@ -1,2 +1,2 @@
-
-t 
+#!/usr/bin/env bash
+# Gunicorn renewed all the workerskill -HUP gunicorn
