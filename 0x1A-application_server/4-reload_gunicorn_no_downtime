@@ -1,3 +1,8 @@
 #!/usr/bin/env bash
-# Gracefully updates gunicorn workers
-pkill -HUP gunicorn
+
+# Get the PID of the Gunicorn master process
+MASTER_PID=$(cat /home/ubuntu/AirBnB_clone_v4/gunicorn.pid)
+
+# Gracefully restart all workers by sending the HUP signal to the master process
+kill -HUP "$MASTER_PID"
+
