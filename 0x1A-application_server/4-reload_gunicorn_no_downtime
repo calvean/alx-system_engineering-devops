@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-# Gunicorn renewed all the workerskill -HUP gunicorn
+# Gracefully updates gunicorn workers
+pkill -HUP gunicorn
